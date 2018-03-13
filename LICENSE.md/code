@@ -1,0 +1,42 @@
+/*
+Challenge
+Using the Java language, have the function FirstFactorial(num) take the num parameter being passed 
+and return the factorial of it (e.g. if num = 4, return (4 * 3 * 2 * 1)). 
+For the test cases, the range will be between 1 and 18 and the input will always be an integer. 
+
+Sample Test Cases
+Input:4
+Output:24
+Input:8
+Output:40320
+*/
+
+import java.util.*; 
+import java.io.*;
+
+class Main {  
+  public static int FirstFactorial(int num) { 
+  
+    // code goes here  
+    int n, Factorial = num;
+    n = num;
+    while (num > 1){
+        num = num - 1;
+        Factorial = Factorial * num;
+    }
+    /* Note: In Java the return type of a function and the 
+       parameter types being passed are defined, so this return 
+       call must match the return type of the function.
+       You are free to modify the return type. */
+       
+    return Factorial;
+    
+  } 
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(FirstFactorial(s.nextLine())); 
+  }   
+  
+}
